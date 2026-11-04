@@ -34,4 +34,4 @@ psql "$(supabase status -o env | grep DB_URL | cut -d= -f2- | tr -d '"')" -f sup
 
 ## Status
 
-Milestone M0 (foundations) done: schema + RLS, theme tokens, zh-HK/en i18n, Supabase client, five labelled tabs, listing card, home feed. Next: M1 auth & profiles.
+M0 (foundations) and M1 (sign-in, onboarding, profile) done. Supabase dashboard steps: [`docs/SETUP.md`](docs/SETUP.md). Next: M2 listings.

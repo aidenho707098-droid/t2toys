@@ -6,6 +6,7 @@ import { isSupabaseConfigured, supabase } from '@/lib/supabase';
 
 export const LISTING_PHOTOS_BUCKET = 'listing-photos';
 const PAGE_SIZE = 30;
+const REQUEST_TIMEOUT_MS = 15_000;
 
 type FeedType = 'sell' | 'wanted';
 
@@ -29,6 +30,9 @@ export async function fetchFeed(type: FeedType): Promise<FeedResult> {
   if (!supabase) {
     return { items: __DEV__ ? SAMPLE_LISTINGS.filter((l) => l.type === type) : [], error: null };
   }
+  // Never spin forever (the old app hung on its loading screen): give up and offer Retry.
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
   const { data, error } = await supabase
     .from('listings')
     .select(
@@ -38,7 +42,12 @@ export async function fetchFeed(type: FeedType): Promise<FeedResult> {
     .in('status', ['active', 'reserved'])
     .order('bumped_at', { ascending: false })
     .limit(PAGE_SIZE)
-    .returns<Row[]>();
+    .abortSignal(controller.signal)
+    .returns<Row[]>()
+    .then((res) => {
+      clearTimeout(timer);
+      return res;
+    });
 
   if (error) return { items: [], error: error.message };
 

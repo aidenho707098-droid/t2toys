@@ -74,5 +74,71 @@
     "retry": "Retry",
     "error": "Something went wrong, please try again",
     "offline": "Not connected to the server (Supabase not configured)"
+  },
+  "auth": {
+    "title": "Sign in to t2 Toys",
+    "subtitle": "Sign in to sell, chat and save. Browsing is free.",
+    "apple": "Continue with Apple",
+    "google": "Continue with Google",
+    "phone": "Continue with phone number",
+    "or": "or",
+    "region": "Region",
+    "regions": {
+      "HK": "Hong Kong +852",
+      "TW": "Taiwan +886",
+      "US": "US +1",
+      "OTHER": "Other"
+    },
+    "phoneLabel": "Mobile number",
+    "phonePlaceholderOther": "+65 9123 4567",
+    "invalidPhone": "Enter a valid mobile number",
+    "sendCode": "Send code",
+    "codeSent": "Code sent to {{phone}}",
+    "codeLabel": "6-digit code",
+    "verify": "Verify",
+    "resend": "Resend",
+    "changeNumber": "Change number",
+    "invalidCode": "That code is wrong or has expired",
+    "failed": "Sign-in failed: {{message}}",
+    "notConfigured": "Server not configured, sign-in unavailable",
+    "terms": "By continuing you agree to the community rules and privacy policy",
+    "close": "Close"
+  },
+  "onboarding": {
+    "usernameTitle": "Pick a username",
+    "usernameHint": "Others will see @{{username}}",
+    "usernameLabel": "Username",
+    "usernameRules": "3–20 letters, numbers or _",
+    "usernameTaken": "That username is taken",
+    "usernameErrors": {
+      "too_short": "At least 3 characters",
+      "too_long": "At most 20 characters",
+      "invalid_chars": "Only letters, numbers and _"
+    },
+    "interestsTitle": "What do you play with?",
+    "interestsHint": "Pick a few categories for your home feed (you can change this later)",
+    "adultTitle": "Airsoft is 18+ only",
+    "adultBody": "The Airsoft & Wargame category includes airsoft guns and related items. Under Hong Kong law, air guns above 2 joules muzzle energy are \"arms\" and need a licence. t2 Toys only allows legal items.",
+    "adultConfirm": "I am 18 or older and will follow Hong Kong law",
+    "adultCancel": "Not now",
+    "next": "Next",
+    "done": "Done",
+    "saving": "Saving…",
+    "pickAtLeastOne": "Pick at least one category",
+    "error": "Couldn't save, please try again"
+  },
+  "profile": {
+    "joined": "Joined {{date}}",
+    "noRating": "No reviews yet",
+    "rating": "{{avg}} ★ ({{count}} reviews)",
+    "verifiedPhone": "Verified phone",
+    "interests": "My interests",
+    "signOut": "Sign out",
+    "editInterests": "Edit interests"
+  },
+  "gate": {
+    "sell": "Sign in to list for free",
+    "inbox": "Sign in to chat with sellers",
+    "signIn": "Sign in / Sign up"
   }
 }

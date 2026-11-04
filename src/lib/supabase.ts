@@ -17,6 +17,8 @@ export const supabase: SupabaseClient | null = isSupabaseConfigured
         autoRefreshToken: true,
         persistSession: true,
         detectSessionInUrl: Platform.OS === 'web',
+        // PKCE: OAuth returns a one-time code we exchange for a session (safe for mobile deep links).
+        flowType: 'pkce',
       },
     })
   : null;

@@ -113,6 +113,40 @@ exception when others then
   insert into r values ('no self-granted credits', true);
 end $$;
 
+-- ── M1 onboarding ──
+-- 13. Usernames are unique ignoring case (seller_a exists)
+reset role; select pg_temp.as_user('00000000-0000-0000-0000-00000000000c');
+do $$ begin
+  update public.profiles set username = 'SELLER_A' where id = auth.uid();
+  insert into r values ('username unique ignoring case', false);
+exception when unique_violation then
+  insert into r values ('username unique ignoring case', true);
+end $$;
+
+-- 14. Following airsoft without 18+ confirmation is rejected
+do $$ begin
+  perform public.set_my_interests(array[(select id from public.categories where slug = 'airsoft')]);
+  insert into r values ('airsoft needs 18+', false);
+exception when others then
+  insert into r values ('airsoft needs 18+', sqlerrm = 'adult_confirmation_required');
+end $$;
+
+-- 15. After confirming, interests save and replace atomically
+update public.profiles set adult_confirmed_at = now(), username = 'collector_c' where id = auth.uid();
+select public.set_my_interests(array[(select id from public.categories where slug = 'airsoft'), (select id from public.categories where slug = 'lego')]);
+select public.set_my_interests(array[(select id from public.categories where slug = 'gunpla')]);
+insert into r select 'interests replaced', array_agg(c.slug) = array['gunpla']
+  from public.user_interests i join public.categories c on c.id = i.category_id where i.user_id = auth.uid();
+
+-- 16. Users cannot write someone else's interests
+do $$ begin
+  insert into public.user_interests (user_id, category_id)
+  values ('00000000-0000-0000-0000-00000000000a', (select id from public.categories where slug = 'lego'));
+  insert into r values ('no writing others interests', false);
+exception when others then
+  insert into r values ('no writing others interests', true);
+end $$;
+
 reset role;
 select name, case when ok then 'PASS' else 'FAIL' end as result from r;
 select case when bool_and(ok) then 'ALL PASS' else 'FAILURES' end as summary from r;

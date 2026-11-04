@@ -71,5 +71,71 @@
     "retry": "再試",
     "error": "出咗啲問題，請再試一次",
     "offline": "未連接到伺服器（未設定 Supabase）"
+  },
+  "auth": {
+    "title": "登入 t2 Toys",
+    "subtitle": "放售、傾偈、收藏都要登入，瀏覽就唔使",
+    "apple": "用 Apple 登入",
+    "google": "用 Google 登入",
+    "phone": "用手機號碼登入",
+    "or": "或者",
+    "region": "地區",
+    "regions": {
+      "HK": "香港 +852",
+      "TW": "台灣 +886",
+      "US": "美國 +1",
+      "OTHER": "其他"
+    },
+    "phoneLabel": "手機號碼",
+    "phonePlaceholderOther": "+65 9123 4567",
+    "invalidPhone": "請輸入有效嘅手機號碼",
+    "sendCode": "發送驗證碼",
+    "codeSent": "驗證碼已發送到 {{phone}}",
+    "codeLabel": "6 位數驗證碼",
+    "verify": "確認",
+    "resend": "重新發送",
+    "changeNumber": "改號碼",
+    "invalidCode": "驗證碼唔啱或者已過期",
+    "failed": "登入失敗：{{message}}",
+    "notConfigured": "未設定伺服器，暫時唔可以登入",
+    "terms": "登入即表示你同意用戶守則及私隱政策",
+    "close": "關閉"
+  },
+  "onboarding": {
+    "usernameTitle": "揀個用戶名稱",
+    "usernameHint": "其他人會見到 @{{username}}",
+    "usernameLabel": "用戶名稱",
+    "usernameRules": "3–20 個英文字母、數字或 _",
+    "usernameTaken": "呢個名已經有人用",
+    "usernameErrors": {
+      "too_short": "最少 3 個字元",
+      "too_long": "最多 20 個字元",
+      "invalid_chars": "只可以用英文字母、數字或 _"
+    },
+    "interestsTitle": "你鍾意玩咩？",
+    "interestsHint": "揀幾個類別，首頁會優先顯示（之後可以改）",
+    "adultTitle": "野戰類別只限 18 歲或以上",
+    "adultBody": "野戰生存遊戲類別包括氣槍及相關物品。香港法例規定槍口能量超過 2 焦耳嘅氣槍屬於「槍械」，必須領有牌照。t2 Toys 只容許合法物品。",
+    "adultConfirm": "我已年滿 18 歲，並會遵守香港法例",
+    "adultCancel": "唔使住",
+    "next": "下一步",
+    "done": "完成",
+    "saving": "儲存緊…",
+    "pickAtLeastOne": "最少揀一個類別",
+    "error": "儲存唔到，請再試"
+  },
+  "profile": {
+    "joined": "{{date}} 加入",
+    "noRating": "未有評價",
+    "rating": "{{avg}} ★（{{count}} 個評價）",
+    "verifiedPhone": "已驗證手機",
+    "interests": "我嘅興趣",
+    "signOut": "登出",
+    "editInterests": "修改興趣"
+  },
+  "gate": {
+    "sell": "登入後即可免費放售",
+    "inbox": "登入後即可同賣家傾偈",
+    "signIn": "登入 / 註冊"
   }
 }
