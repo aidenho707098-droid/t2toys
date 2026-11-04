@@ -1,0 +1,78 @@
+{
+  "tabs": {
+    "home": "Home",
+    "search": "Search",
+    "sell": "Sell",
+    "inbox": "Chats",
+    "me": "Me"
+  },
+  "home": {
+    "title": "t2 Toys",
+    "forSale": "For sale",
+    "wanted": "Wanted",
+    "allCategories": "All",
+    "empty": "Nothing here yet",
+    "emptyHint": "Follow more categories, or be the first to list something!"
+  },
+  "search": {
+    "placeholder": "Search toys, models, brands…",
+    "recent": "Recent searches",
+    "saved": "Saved searches",
+    "hint": "Try \"Marui G17\", \"RG Gundam\" or \"LEGO 75192\""
+  },
+  "sell": {
+    "title": "Sell an item",
+    "free": "Listing is always free",
+    "start": "Start listing",
+    "signInRequired": "Sign in to list for free"
+  },
+  "inbox": {
+    "title": "Chats",
+    "empty": "No conversations yet",
+    "emptyHint": "Found something you like? Tap \"Chat now\"",
+    "signInRequired": "Sign in to chat with sellers"
+  },
+  "me": {
+    "title": "Me",
+    "signIn": "Sign in / Sign up",
+    "signInHint": "Use Apple, Google or your phone number",
+    "myListings": "My listings",
+    "saved": "Saved",
+    "reviews": "Reviews",
+    "settings": "Settings",
+    "language": "Language",
+    "help": "Help & community rules"
+  },
+  "listing": {
+    "reserved": "Reserved",
+    "sold": "Sold",
+    "wanted": "Wanted"
+  },
+  "condition": {
+    "new": "New",
+    "like_new": "Like new",
+    "good": "Good",
+    "fair": "Fair",
+    "for_parts": "For parts"
+  },
+  "price": {
+    "negotiable": "Negotiable"
+  },
+  "time": {
+    "justNow": "Just now",
+    "minutesAgo_one": "{{count}} min ago",
+    "minutesAgo_other": "{{count}} mins ago",
+    "hoursAgo_one": "{{count}} hr ago",
+    "hoursAgo_other": "{{count}} hrs ago",
+    "daysAgo_one": "{{count}} day ago",
+    "daysAgo_other": "{{count}} days ago"
+  },
+  "user": {
+    "unnamed": "Unnamed user"
+  },
+  "common": {
+    "retry": "Retry",
+    "error": "Something went wrong, please try again",
+    "offline": "Not connected to the server (Supabase not configured)"
+  }
+}

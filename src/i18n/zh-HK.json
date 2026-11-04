@@ -1,0 +1,75 @@
+{
+  "tabs": {
+    "home": "首頁",
+    "search": "搜尋",
+    "sell": "放售",
+    "inbox": "傾偈",
+    "me": "我的"
+  },
+  "home": {
+    "title": "t2 Toys",
+    "forSale": "放售中",
+    "wanted": "徵求",
+    "allCategories": "全部",
+    "empty": "暫時未有物品",
+    "emptyHint": "追蹤更多類別，或者做第一個放售嘅人！"
+  },
+  "search": {
+    "placeholder": "搵玩具、型號、品牌…",
+    "recent": "最近搜尋",
+    "saved": "已儲存搜尋",
+    "hint": "試吓搜尋「Marui G17」、「RG 高達」或「LEGO 75192」"
+  },
+  "sell": {
+    "title": "放售物品",
+    "free": "放售完全免費",
+    "start": "開始放售",
+    "signInRequired": "登入後即可免費放售"
+  },
+  "inbox": {
+    "title": "傾偈",
+    "empty": "未有對話",
+    "emptyHint": "睇中心水物品，撳「即刻傾」就得",
+    "signInRequired": "登入後即可同賣家傾偈"
+  },
+  "me": {
+    "title": "我的",
+    "signIn": "登入 / 註冊",
+    "signInHint": "用 Apple、Google 或手機號碼登入",
+    "myListings": "我的物品",
+    "saved": "已收藏",
+    "reviews": "評價",
+    "settings": "設定",
+    "language": "語言",
+    "help": "幫助及用戶守則"
+  },
+  "listing": {
+    "reserved": "已預留",
+    "sold": "已售出",
+    "wanted": "徵求"
+  },
+  "condition": {
+    "new": "全新",
+    "like_new": "近乎全新",
+    "good": "良好",
+    "fair": "一般",
+    "for_parts": "零件用"
+  },
+  "price": {
+    "negotiable": "議價"
+  },
+  "time": {
+    "justNow": "剛剛",
+    "minutesAgo": "{{count}} 分鐘前",
+    "hoursAgo": "{{count}} 小時前",
+    "daysAgo": "{{count}} 日前"
+  },
+  "user": {
+    "unnamed": "未命名用戶"
+  },
+  "common": {
+    "retry": "再試",
+    "error": "出咗啲問題，請再試一次",
+    "offline": "未連接到伺服器（未設定 Supabase）"
+  }
+}
